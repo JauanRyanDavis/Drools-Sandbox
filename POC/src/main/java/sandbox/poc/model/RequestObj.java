@@ -11,7 +11,7 @@ public class RequestObj implements java.io.Serializable
 
    private java.lang.String input;
    private java.lang.String output;
-   private java.util.List<java.lang.String> errors;
+   private RuleErrors errors;
    private java.lang.String outcome;
    private java.lang.String comments;
    private java.lang.Boolean approved;
@@ -38,16 +38,6 @@ public class RequestObj implements java.io.Serializable
    public void setOutput(java.lang.String output)
    {
       this.output = output;
-   }
-
-   public java.util.List<java.lang.String> getErrors()
-   {
-      return this.errors;
-   }
-
-   public void setErrors(java.util.List<java.lang.String> errors)
-   {
-      this.errors = errors;
    }
 
    public java.lang.String getOutcome()
@@ -80,8 +70,18 @@ public class RequestObj implements java.io.Serializable
       this.approved = approved;
    }
 
+   public sandbox.poc.model.RuleErrors getErrors()
+   {
+      return this.errors;
+   }
+
+   public void setErrors(sandbox.poc.model.RuleErrors errors)
+   {
+      this.errors = errors;
+   }
+
    public RequestObj(java.lang.String input, java.lang.String output,
-         java.util.List<java.lang.String> errors, java.lang.String outcome,
+         sandbox.poc.model.RuleErrors errors, java.lang.String outcome,
          java.lang.String comments, java.lang.Boolean approved)
    {
       this.input = input;
