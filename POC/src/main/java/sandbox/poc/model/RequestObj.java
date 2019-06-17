@@ -18,6 +18,8 @@ public class RequestObj implements java.io.Serializable
 
    private java.lang.Boolean valid;
 
+   private java.lang.Integer anotherField;
+
    public RequestObj()
    {
    }
@@ -92,10 +94,20 @@ public class RequestObj implements java.io.Serializable
       this.valid = valid;
    }
 
+   public java.lang.Integer getAnotherField()
+   {
+      return this.anotherField;
+   }
+
+   public void setAnotherField(java.lang.Integer anotherField)
+   {
+      this.anotherField = anotherField;
+   }
+
    public RequestObj(java.lang.String input, java.lang.String output,
          sandbox.poc.model.RuleErrors errors, java.lang.String outcome,
          java.lang.String comments, java.lang.Boolean approved,
-         java.lang.Boolean valid)
+         java.lang.Boolean valid, java.lang.Integer anotherField)
    {
       this.input = input;
       this.output = output;
@@ -104,6 +116,7 @@ public class RequestObj implements java.io.Serializable
       this.comments = comments;
       this.approved = approved;
       this.valid = valid;
+      this.anotherField = anotherField;
    }
 
 }
