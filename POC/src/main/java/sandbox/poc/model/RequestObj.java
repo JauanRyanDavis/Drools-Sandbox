@@ -16,6 +16,8 @@ public class RequestObj implements java.io.Serializable
    private java.lang.String comments;
    private java.lang.Boolean approved;
 
+   private java.lang.Boolean valid;
+
    public RequestObj()
    {
    }
@@ -80,9 +82,20 @@ public class RequestObj implements java.io.Serializable
       this.errors = errors;
    }
 
+   public java.lang.Boolean getValid()
+   {
+      return this.valid;
+   }
+
+   public void setValid(java.lang.Boolean valid)
+   {
+      this.valid = valid;
+   }
+
    public RequestObj(java.lang.String input, java.lang.String output,
          sandbox.poc.model.RuleErrors errors, java.lang.String outcome,
-         java.lang.String comments, java.lang.Boolean approved)
+         java.lang.String comments, java.lang.Boolean approved,
+         java.lang.Boolean valid)
    {
       this.input = input;
       this.output = output;
@@ -90,6 +103,7 @@ public class RequestObj implements java.io.Serializable
       this.outcome = outcome;
       this.comments = comments;
       this.approved = approved;
+      this.valid = valid;
    }
 
 }
